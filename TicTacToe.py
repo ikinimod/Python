@@ -4,7 +4,7 @@ print(""" Welcome to my Tic Tac Toe game.
       |__|__|__|
       |__|__|__|
       |__|__|__|
-Enter first player name !""")
+Enter first player name!""")
 #class X(self):
 
 
