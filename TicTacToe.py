@@ -18,6 +18,22 @@ def print_field():
 print_field()
 
 #User Input
-choose_field = input("Bitte Feld eingeben: ")
+choose_field = input("Choose your field: ")
 choose_field = int(choose_field)
 print(type(choose_field))
+
+def user_input():
+    while True:
+        choose_field = input("Choose your field: ")
+        try:
+            choose_field = int(choose_field)
+        except ValueError:
+            print("Please put a number between 1 to 9")
+        else:
+            if choose_field >= 1 and choose_field <= 9:
+                  return choose_field
+            else:
+                  print("Number is not between 1 to 9")
+
+choose_field = user_input()
+print("Field: " + str(choose_field))
