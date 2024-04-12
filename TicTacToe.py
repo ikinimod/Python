@@ -6,9 +6,9 @@ field = [" ",
              "7","8","9"]
 
 # field printing
-print (field[1] + "|" + field[2] + "|" + field[3] )
-print (field[4] + "|" + field[5] + "|" + field[6] )
-print (field[7] + "|" + field[8] + "|" + field[9] )
+# print (field[1] + "|" + field[2] + "|" + field[3] )
+# print (field[4] + "|" + field[5] + "|" + field[6] )
+# print (field[7] + "|" + field[8] + "|" + field[9] )
 
 # Printing field function
 def print_field():
@@ -16,3 +16,8 @@ def print_field():
     print (field[4] + "|" + field[5] + "|" + field[6] )
     print (field[7] + "|" + field[8] + "|" + field[9] )
 print_field()
+
+#User Input
+choose_field = input("Bitte Feld eingeben: ")
+choose_field = int(choose_field)
+print(type(choose_field))
