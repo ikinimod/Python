@@ -42,7 +42,7 @@ def switch_player():
      global active_player
      if active_player == "X":
           active_player = "O"
-      else:
+     else:
           active_player = "X"
 
 print_field()
