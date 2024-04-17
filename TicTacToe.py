@@ -1,5 +1,8 @@
 # This is a portfolio project. I will try to make a tictactoe game with python respectively obcejt orientated programming.
 
+running = True
+active_player = "X"
+
 field = [" ",
              "1","2","3",
              "4","5","6",
@@ -18,13 +21,13 @@ def print_field():
 print_field()
 
 #User Input
-choose_field = input("Choose your field: ")
-choose_field = int(choose_field)
-print(type(choose_field))
-
 def user_input():
+    global running
     while True:
         choose_field = input("Choose your field: ")
+        if choose_field == q:
+             running = False
+             return
         try:
             choose_field = int(choose_field)
         except ValueError:
@@ -35,5 +38,21 @@ def user_input():
             else:
                   print("Number is not between 1 to 9")
 
-choose_field = user_input()
-print("Field: " + str(choose_field))
+def switch_player():
+     global active_player
+     if active_player == "X":
+          active_player = "O"
+      else:
+          active_player = "X"
+
+print_field()
+while running:
+     print("Player" + active_player + "move")
+     choose_field = user_input()
+     if choose_field:
+          field[choose_field] = active_player
+          print_field()
+          switch_player()
+
+# choose_field = user_input()
+# print("Field: " + str(choose_field))
