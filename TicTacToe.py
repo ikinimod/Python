@@ -59,7 +59,7 @@ def check_win():
      if field[3] == field[6] == field[9]:
           return[3]
      # Check diagonal
-    if field[1] == field[5] == field[9]:
+     if field[1] == field[5] == field[9]:
           return[5]
      if field[7] == field[5] == field[3]:
           return[5]
@@ -80,16 +80,25 @@ def check_draw():
 # Output active field
 print_field()
 while running:
-     print("Player" + active_player + "move")
+     print()
+     print("Player " + active_player + " move")
      choose_field = user_input()
      if choose_field:
           field[choose_field] = active_player
+          # Current field
           print_field()
+          # Check, if win
           winner = check_win()
           if winner:
                print("Player " + winner + " has won!")
-               active_player = False
+               running = False
+               break
+          # Check, if draw
+          draw = check_draw()
+          if draw:
+               print("This game is a draw!")
+               running = False
+           # Switch player    
           switch_player()
+print()          
 
-# choose_field = user_input()
-# print("Field: " + str(choose_field))
