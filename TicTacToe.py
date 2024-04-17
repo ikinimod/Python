@@ -42,6 +42,29 @@ def switch_player():
      else:
           active_player = "X"
 
+# Function that controls win status
+def check_win():
+     # Check rows
+     if field[1] == field[2] == field[3]:
+          return field[1]
+     if field[4] == field[5] == field[6]:
+          return[4]
+     if field[7] == field[8] == field[9]:
+          return[7]
+     # Check columns
+     if field[1] == field[4] == field[7]:
+          return field[1]
+     if field[2] == field[5] == field[8]:
+          return[2]
+     if field[3] == field[6] == field[9]:
+          return[3]
+     # Check diagonal
+    if field[1] == field[5] == field[9]:
+          return[5]
+     if field[7] == field[5] == field[3]:
+          return[5]
+
+
 # Output active field
 print_field()
 while running:
