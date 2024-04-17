@@ -31,7 +31,10 @@ def user_input():
             print("Please put a number between 1 to 9")
         else:
             if choose_field >= 1 and choose_field <= 9:
-                  return choose_field
+                  if field[choose_field] == "X" or field[choose_field] == "O":
+                       print(" Field has already been used - choose another one!")
+                  else:
+                      return choose_field
             else:
                   print("Number is not between 1 to 9")
 
