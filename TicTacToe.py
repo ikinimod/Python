@@ -52,21 +52,21 @@ def check_win():
      if field[1] == field[2] == field[3]:
           return field[1]
      if field[4] == field[5] == field[6]:
-          return[4]
+          return field[4]
      if field[7] == field[8] == field[9]:
-          return[7]
+          return field[7]
      # Check columns
      if field[1] == field[4] == field[7]:
           return field[1]
      if field[2] == field[5] == field[8]:
-          return[2]
+          return field[2]
      if field[3] == field[6] == field[9]:
-          return[3]
+          return field[3]
      # Check diagonal
      if field[1] == field[5] == field[9]:
-          return[5]
+          return field[5]
      if field[7] == field[5] == field[3]:
-          return[5]
+          return field[5]
 
 # Function that check if it is a draw
 def check_draw():
@@ -101,7 +101,6 @@ while running:
           choose_field = int(random.choice(field_AI))
      else:
           choose_field = user_input()
-    #  choose_field = user_input()
      if choose_field:
           field[choose_field] = active_player
           # Current field
