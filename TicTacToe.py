@@ -73,6 +73,10 @@ while running:
      if choose_field:
           field[choose_field] = active_player
           print_field()
+          winner = check_win()
+          if winner:
+               print("Player " + winner + " has won!")
+               active_player = False
           switch_player()
 
 # choose_field = user_input()
