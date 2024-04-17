@@ -64,6 +64,18 @@ def check_win():
      if field[7] == field[5] == field[3]:
           return[5]
 
+# Function that check if it is a draw
+def check_draw():
+     if (field[1] == "X" or field[1] == "O") \
+     and (field[2] == "X" or field[2] == "O") \
+     and (field[3] == "X" or field[3] == "O") \
+     and (field[4] == "X" or field[4] == "O") \
+     and (field[5] == "X" or field[5] == "O") \
+     and (field[6] == "X" or field[6] == "O") \
+     and (field[7] == "X" or field[7] == "O") \
+     and (field[8] == "X" or field[8] == "O") \
+     and (field[9] == "X" or field[9] == "O"):
+          return("Draw!")
 
 # Output active field
 print_field()
