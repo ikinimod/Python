@@ -1,31 +1,28 @@
 # This is a portfolio project. I will try to make a tictactoe game with python respectively obcejt orientated programming.
+print("Tic-Tac-Toe Python")
 
 running = True
 active_player = "X"
 
+# Creating field as list
 field = [" ",
              "1","2","3",
              "4","5","6",
              "7","8","9"]
 
-# field printing
-# print (field[1] + "|" + field[2] + "|" + field[3] )
-# print (field[4] + "|" + field[5] + "|" + field[6] )
-# print (field[7] + "|" + field[8] + "|" + field[9] )
 
-# Printing field function
+# Field function
 def print_field():
     print (field[1] + "|" + field[2] + "|" + field[3] )
     print (field[4] + "|" + field[5] + "|" + field[6] )
     print (field[7] + "|" + field[8] + "|" + field[9] )
-print_field()
 
-#User Input
+#User input + control
 def user_input():
     global running
     while True:
         choose_field = input("Choose your field: ")
-        if choose_field == q:
+        if choose_field == "q":
              running = False
              return
         try:
@@ -45,6 +42,7 @@ def switch_player():
      else:
           active_player = "X"
 
+# Output active field
 print_field()
 while running:
      print("Player" + active_player + "move")
